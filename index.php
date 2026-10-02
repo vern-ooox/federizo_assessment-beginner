@@ -18,6 +18,7 @@ $revenue = $revRow['s'];
 <?php include "nav.php"; ?>
 
 <h2>Dashboard</h2>
+<p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
 
 <ul>
   <li>Total Clients: <b><?php echo $clients; ?></b></li>

@@ -8,7 +8,8 @@ JOIN clients c ON b.client_id = c.client_id
 JOIN services s ON b.service_id = s.service_id
 ORDER BY b.booking_id DESC
 ";
-$result = mysqli_query($conn, $sql);
+$db = $GLOBALS['conn'] ?? $GLOBALS['mysqli'] ?? null;
+$result = mysqli_query($db, $sql);
 ?>
 <!doctype html>
 <html>
